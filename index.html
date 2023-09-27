@@ -4,14 +4,25 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>To Do List</title>
+    <title>To DoList</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 
 </head>
 
 <body>
-    <h1>To Do List</h1>
+    <h1>My ToDo List</h1>
+    <p>0 Tasks completed</p>
+
+    <label for="todoInput">Enter your todo:</label>
+    <br>
+    <input type="text" id="todoInput" name="todo">
+    <button id="addTodo">Add</button>
+
+    <ul id="todoList">
+    </ul>
+
+    <small></small>
 
     <script src='main.js'></script>
 </body>

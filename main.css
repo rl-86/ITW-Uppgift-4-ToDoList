@@ -1,5 +1,18 @@
 /* CSS FILE */
 
 body {
-    background-color: antiquewhite;
+    background-color: aliceblue
+}
+
+h1 {
+    color: rgba(0, 0, 155, 0.244);
+}
+
+#addTodo {
+    color: red;
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
 }
