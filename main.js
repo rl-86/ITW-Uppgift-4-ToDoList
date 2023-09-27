@@ -13,6 +13,19 @@ const completedInfo = document.querySelector("p");
 let completedCount = 0;
 const todoArray = [];
 
+// Function to handle change status on object in array
+// Takes paraneter completed (bool)
+function changeStatus(todoText, completed) {
+
+    // Find index, look in objects and value on "name"
+    let correctIndex = todoArray.map(t => t.name).indexOf(todoText);
+
+
+    // Change status on the object at correct index
+    todoArray[correctIndex].status = completed;
+
+}
+
 button.addEventListener("click", function () {
 
     //Fetch value from input
@@ -26,6 +39,10 @@ button.addEventListener("click", function () {
     else {
         info.innerText = "";
     }
+
+    // Add todo to todoArray
+    const todoObject = { name: text, status: false };
+    todoArray.push(todoObject);
 
     // Create li element to ul
     const item = document.createElement("li");
@@ -43,10 +60,18 @@ button.addEventListener("click", function () {
         if (item.getAttribute("class") == "completed") {
 
             item.setAttribute("class", "");
+
+            // Change status on object in array to false
+            let clickedText = item.firstChild.firstChild.textContent;
+            changeStatus(clickedText, false);
             completedCount--
         }
         else {
             item.setAttribute("class", "completed");
+
+            // Change status on object in array to true
+            let clickedText = item.firstChild.firstChild.textContent;
+            changeStatus(clickedText, true);
             completedCount++
         }
 
