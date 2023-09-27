@@ -9,8 +9,9 @@ const button = document.querySelector("#addTodo");
 const info = document.querySelector("small");
 const completedInfo = document.querySelector("p");
 
-
+//My JS variables
 let completedCount = 0;
+const todoArray = [];
 
 button.addEventListener("click", function () {
 
