@@ -1,18 +1,29 @@
 /* CSS FILE */
 
 body {
-    background-color: aliceblue
+    height: 100vh;
+    background-image: linear-gradient(130deg, #e1f2ff, rgb(35, 112, 255));
+    background-repeat: no-repeat;
+    background-size: auto;
+    font-family: 'Segoe UI', sans-serif;
+
 }
 
 h1 {
-    color: rgba(0, 0, 155, 0.244);
+    color: rgb(255, 0, 0);
 }
 
 #addTodo {
-    color: red;
+    color: rgb(0, 0, 0);
 }
 
 .completed {
-    color: gray;
+    color: grey;
     text-decoration: line-through;
+}
+
+.trashcan {
+
+    margin-left: 10px;
+    cursor: pointer;
 }

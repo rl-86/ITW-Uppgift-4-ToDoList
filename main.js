@@ -8,10 +8,23 @@ const list = document.querySelector("ul");
 const button = document.querySelector("#addTodo");
 const info = document.querySelector("small");
 const completedInfo = document.querySelector("p");
+const title = document.querySelector("h1");
+
 
 //My JS variables
 let completedCount = 0;
 const todoArray = [];
+const simpleTodoArray = [];
+
+// Ecample 
+function simpleStuff(printThis) {
+    console.log(printThis);
+}
+
+title.addEventListener("click", function () {
+    let theStuff = title.firstChild.textContent;
+    simpleStuff(theStuff);
+})
 
 // Function to handle change status on object in array
 // Takes paraneter completed (bool)
@@ -44,14 +57,24 @@ button.addEventListener("click", function () {
     const todoObject = { name: text, status: false };
     todoArray.push(todoObject);
 
+    // Add todo to our simple todoArray
+    simpleTodoArray.push(text);
+
     // Create li element to ul
     const item = document.createElement("li");
     list.appendChild(item);
 
-    // Create a span-element in our new li and add text
-    const itemLabel = document.createElement("p");
+    // Create a p-element in our new li and add text
+    const itemLabel = document.createElement("span");
     itemLabel.innerText = text;
     item.appendChild(itemLabel);
+
+    // Create span element that has a trashcan
+    const trashcan = document.createElement("span");
+    trashcan.innerHTML = "X";
+    trashcan.setAttribute("CLASS", "trashcan");
+    item.appendChild(trashcan);
+
 
     // Add listener to the span
     itemLabel.addEventListener("click", function () {
@@ -77,6 +100,26 @@ button.addEventListener("click", function () {
 
         completedInfo.innerText = `${completedCount} completed`;
     })
+
+    // Add listener to the trashcan
+    trashcan.addEventListener("click", function () {
+
+        // set compled correct
+        if (item.getAttribute("class") == "completed") {
+            completedCount--
+            completedInfo.innerText = `${completedCount} completed`;
+        }
+
+        // Set todoArray correct
+        let removeText = item.firstChild.firstChild.textContent;
+        let indexToRemove = simpleTodoArray.indexOf(removeText)
+        simpleTodoArray.splice(indexToRemove, 1);
+
+        // remove li element
+        item.remove();
+
+    })
+
 
     //Empty input field
     input.value = "";
