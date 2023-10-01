@@ -2,7 +2,7 @@
 
 body {
     height: 100vh;
-    background-image: linear-gradient(130deg, #e1f2ff, rgb(35, 112, 255));
+    background-image: linear-gradient(110deg, #cae7fd, rgb(35, 112, 255));
     background-repeat: no-repeat;
     background-size: auto;
     font-family: 'Segoe UI', sans-serif;
@@ -10,11 +10,39 @@ body {
 }
 
 h1 {
-    color: rgb(255, 0, 0);
+    color: rgba(0, 0, 0, 0.7);
+    margin: 30px;
+    text-shadow: 1px 1px 6px #ffffff;
+}
+
+#space {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.44);
+    margin: 20px;
+    padding: 10px;
+    max-width: 400px;
 }
 
 #addTodo {
-    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    background-color: rgb(35, 112, 255);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#todoInput {
+    width: 80%;
+    padding: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+#message {
+    margin: 30px;
+
 }
 
 .completed {
@@ -23,7 +51,7 @@ h1 {
 }
 
 .trashcan {
-
+    color: rgb(187, 3, 3);
     margin-left: 10px;
     cursor: pointer;
 }

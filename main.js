@@ -16,7 +16,7 @@ let completedCount = 0;
 const todoArray = [];
 const simpleTodoArray = [];
 
-// Ecample 
+// Example 
 function simpleStuff(printThis) {
     console.log(printThis);
 }
@@ -46,7 +46,7 @@ button.addEventListener("click", function () {
 
     //Check if input is empty
     if (text.length == 0) {
-        info.innerText = "Input must not be empty!";
+        info.innerText = "Input cannot be empty!";
         return;
     }
     else {
@@ -71,7 +71,7 @@ button.addEventListener("click", function () {
 
     // Create span element that has a trashcan
     const trashcan = document.createElement("span");
-    trashcan.innerHTML = "X";
+    trashcan.innerHTML = "&#128942;";
     trashcan.setAttribute("CLASS", "trashcan");
     item.appendChild(trashcan);
 
