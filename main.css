@@ -16,7 +16,7 @@ h1 {
 }
 
 #space {
-    background-color: #fff;
+    background-color: #f0f7ff;
     border-radius: 10px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.44);
     margin: 20px;
@@ -45,13 +45,17 @@ h1 {
 
 }
 
+#completedTasks {
+    font-size: small;
+}
+
 .completed {
-    color: grey;
+    color: rgb(120, 120, 120);
     text-decoration: line-through;
 }
 
 .trashcan {
-    color: rgb(187, 3, 3);
-    margin-left: 10px;
+    color: rgb(192, 0, 0);
+    margin-left: 12px;
     cursor: pointer;
 }

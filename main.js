@@ -71,6 +71,10 @@ button.addEventListener("click", function () {
 
     // Create span element that has a trashcan
     const trashcan = document.createElement("span");
+    // Trashcan icon
+    //trashcan.innerHTML = "&#x1f5d1;";
+
+    // X icon as trashcan
     trashcan.innerHTML = "&#128942;";
     trashcan.setAttribute("CLASS", "trashcan");
     item.appendChild(trashcan);
@@ -98,7 +102,7 @@ button.addEventListener("click", function () {
             completedCount++
         }
 
-        completedInfo.innerText = `${completedCount} completed`;
+        completedInfo.innerText = `${completedCount} Tasks completed`;
     })
 
     // Add listener to the trashcan
@@ -107,7 +111,7 @@ button.addEventListener("click", function () {
         // set compled correct
         if (item.getAttribute("class") == "completed") {
             completedCount--
-            completedInfo.innerText = `${completedCount} completed`;
+            completedInfo.innerText = `${completedCount} Tasks completed`;
         }
 
         // Set todoArray correct
